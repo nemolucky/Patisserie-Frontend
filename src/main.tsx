@@ -3,18 +3,23 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from './layout/Standard'
-import { Home } from './screens/Home'
-import Product from './screens/Product'
+import Dessert from './screens/Dessert'
+import Cart from './screens/Cart'
+import About from './screens/About'
+import { Guarantee } from './screens/Guarantee'
+import Catalog from './screens/Catalog'
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<BrowserRouter>
 			<Routes>
 				<Route element={<Layout />}>
-					<Route path='/' element={<Home />} />
-					<Route path='/product' element={<Product />} />
-					<Route path='/favorites' element={<Product />} />
-					<Route path='/cart' element={<Product />} />
+					<Route path='/catalog' element={<Catalog />} />
+					<Route path='/dessert' element={<Dessert />} />
+					{/* <Route path='/favorites' element={<Product />} /> */}
+					<Route path='/cart' element={<Cart />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/guarantee' element={<Guarantee />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

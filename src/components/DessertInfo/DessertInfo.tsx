@@ -1,11 +1,11 @@
 import { CategoryList } from './CategoryList'
-import { ProductDescription } from './ProductDescription'
+import { DessertDescription } from './DessertDescription'
 
-export const ProductInfo = () => {
+export const DessertInfo = () => {
 	return (
 		<div className='flex-1 flex flex-col gap-4'>
 			<CategoryList />
-			<ProductDescription />
+			<DessertDescription />
 		</div>
 	)
 }

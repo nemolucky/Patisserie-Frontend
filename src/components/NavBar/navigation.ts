@@ -1,8 +1,8 @@
 import {
-	Heart,
-	Home,
+	Dessert,
 	Info,
-	ShoppingBasket,
+	LucideShoppingCart,
+	ShieldAlertIcon,
 	type LucideProps,
 } from 'lucide-react'
 
@@ -16,23 +16,28 @@ export interface INavigationButton {
 
 export const NavigationButtonList: INavigationButton[] = [
 	{
-		icon: Home,
-		label: 'Главная',
-		path: '/',
+		icon: Info,
+		label: 'О нас',
+		path: '/about',
 	},
 	{
-		icon: Heart,
-		label: 'Избранное',
-		path: '/favorites',
+		icon: Dessert,
+		label: 'Каталог',
+		path: '/catalog',
 	},
+	// {
+	// 	icon: Heart,
+	// 	label: 'Избранное',
+	// 	path: '/favorites',
+	// },
 	{
-		icon: ShoppingBasket,
+		icon: LucideShoppingCart,
 		label: 'Корзина',
 		path: '/cart',
 	},
 	{
-		icon: Info,
-		label: 'Информация',
-		path: '/info',
+		icon: ShieldAlertIcon,
+		label: 'Информация о гарантии',
+		path: '/guarantee',
 	},
 ]

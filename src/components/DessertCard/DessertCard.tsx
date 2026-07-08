@@ -1,7 +1,7 @@
 import { ShoppingBasket } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-export const ProductCard = () => {
+export const DessertCard = () => {
 	const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault()
 		e.stopPropagation()
@@ -10,7 +10,7 @@ export const ProductCard = () => {
 
 	return (
 		<Link
-			to={'/product'}
+			to={'/dessert'}
 			className='bg-white rounded-s-3xl rounded-ee-3xl shadow-lg  flex flex-col items-center'
 		>
 			<img

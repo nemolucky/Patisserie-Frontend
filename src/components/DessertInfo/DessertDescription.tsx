@@ -2,7 +2,7 @@ import { Dot, ShoppingBasket } from 'lucide-react'
 import { useState } from 'react'
 import { NutritionFacts } from './NutritionFacts'
 
-export const ProductDescription = () => {
+export const DessertDescription = () => {
 	const [quantity, setQuantity] = useState(1)
 
 	const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {

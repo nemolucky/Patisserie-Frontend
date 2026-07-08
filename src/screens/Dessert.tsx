@@ -1,15 +1,15 @@
 import { ImagePicker } from '../components/ImagePicker/ImagePicker'
-import { ProductInfo } from '../components/ProductInfo/ProductInfo'
+import { DessertInfo } from '../components/DessertInfo/DessertInfo'
 
-export const Product = () => {
+export const Dessert = () => {
 	return (
 		<div className='w-9/12 mx-auto'>
 			<div className='mt-10 flex gap-10'>
 				<ImagePicker />
-				<ProductInfo />
+				<DessertInfo />
 			</div>
 		</div>
 	)
 }
 
-export default Product
+export default Dessert

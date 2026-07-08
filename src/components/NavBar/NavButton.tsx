@@ -22,6 +22,17 @@ export const NavButton = ({ icon: Icon, label, path }: Props) => {
 			</div>
 		)
 	}
+	if (location.pathname === '/dessert' && path === '/catalog') {
+		return (
+			<Link
+				to={path}
+				aria-label={`Current page: ${label}`}
+				className='bg-[#F6C9D0] text-white h-14 w-14 flex items-center justify-center rounded-full shadow-md'
+			>
+				<Icon size={24} />
+			</Link>
+		)
+	}
 	return (
 		<Link
 			to={path}
