@@ -3,16 +3,16 @@ import { CertificateList } from '../components/CertificateList/CertificateList'
 
 export const About = () => {
 	return (
-		<div className='w-9/12 mx-auto'>
-			<div className='mt-10 grid grid-cols-2 gap-8'>
-				<div className='flex flex-col gap-8'>
+		<div className='w-11/12 sm:w-9/12 md:w-10/12 mx-auto'>
+			<div className='mt-10 grid lg:grid-cols-3 gap-8 lg:gap-2 grid-cols-1'>
+				<div className='order-2 lg:order-1 lg:col-span-2 flex flex-col gap-8'>
 					<h2
-						className='text-4xl text-[#4B3B36]'
+						className='text-2xl text-[#4B3B36] sm:text-3xl xl:text-4xl'
 						style={{ fontFamily: 'Fraunces' }}
 					>
 						Кондитерская, которая началась с одной домашней духовки
 					</h2>
-					<p className='text-lg text-[#4b3b36bd]'>
+					<p className='text-md text-justify text-[#4b3b36bd] sm:text-lg lg:text-xl '>
 						Меня зовут Елена, и «Пудра» началась не с бизнес-плана, а с того,
 						что друзья постоянно просили испечь ещё один торт «на праздник».
 						Через полтора года домашняя кухня превратилась в маленькую
@@ -25,35 +25,46 @@ export const About = () => {
 					</p>
 					<div className='flex flex-col'>
 						<span
-							className='text-2xl italic'
+							className='text-2xl italic xl:text-3xl'
 							style={{ fontFamily: 'Fraunces' }}
 						>
 							Елена
 						</span>
-						<p className='flex items-center text-lg lowercase text-[#4b3b3673]'>
+						<p className='flex items-center text-md text-center sm:text-lg xl:text-xl lowercase text-[#4b3b3673]'>
 							Кондитер
 							<Dot size={16}></Dot> Основательница «Пудры»
 						</p>
-						<ul className='mt-6 flex gap-8'>
+						<ul className='mt-8 flex items-start justify-between gap-2'>
 							<li className='flex flex-col items-center justify-center'>
-								<span className='text-2xl' style={{ fontFamily: 'Fraunces' }}>
-									6 лет
+								<span
+									className='text-xl sm:text-2xl xl:text-3xl '
+									style={{ fontFamily: 'Fraunces' }}
+								>
+									6 л
 								</span>
-								<span className='text-md text-[#4b3b3673]'>опыта</span>
+								<span className='text-sm sm:text-lg xl:text-xl text-[#4b3b3673]'>
+									опыта
+								</span>
 							</li>
 							<li className='flex flex-col items-center justify-center'>
-								<span className='text-2xl' style={{ fontFamily: 'Fraunces' }}>
+								<span
+									className='text-xl sm:text-2xl xl:text-3xl '
+									style={{ fontFamily: 'Fraunces' }}
+								>
 									100+
 								</span>
-								<span className='text-md text-[#4b3b3673]'>
+								<span className='text-sm text-center sm:text-lg xl:text-xl text-[#4b3b3673]'>
 									готовых рецептов
 								</span>
 							</li>
 							<li className='flex flex-col items-center justify-center'>
-								<span className='text-2xl' style={{ fontFamily: 'Fraunces' }}>
+								<span
+									className='text-xl sm:text-2xl xl:text-3xl '
+									style={{ fontFamily: 'Fraunces' }}
+								>
 									10+
 								</span>
-								<span className='text-md text-[#4b3b3673]'>
+								<span className='text-sm text-center sm:text-lg xl:text-xl text-[#4b3b3673]'>
 									курса и сертификатов
 								</span>
 							</li>
@@ -61,21 +72,21 @@ export const About = () => {
 					</div>
 					<div>
 						<h3
-							className='text-2xl text-[#4B3B36]'
+							className='text-2xl text-[#4B3B36] xl:text-3xl'
 							style={{ fontFamily: 'Fraunces' }}
 						>
 							Сертификаты и обучение
 						</h3>
-						<p className='mt-2 text-sm font-semibold text-[#4b3b3673]'>
+						<p className='mt-2 text-sm sm:text-md xl:text-lg font-semibold text-[#4b3b3673]'>
 							Листайте вправо - курсов больше, чем кажется
 						</p>
 					</div>
 					<CertificateList></CertificateList>
 				</div>
 				<img
-					src='../../public/person-cake.png'
+					src='../../person-cake.png'
 					alt='Кондитер'
-					className='w-full h-full object-cover rounded-2xl'
+					className='order-1 lg:order-2 w-full max-h-100 object-contain'
 				/>
 			</div>
 		</div>

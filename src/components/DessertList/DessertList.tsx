@@ -1,8 +1,8 @@
-import { DessertCard } from '../DessertCard/DessertCard'
+import { DessertCard } from './DessertCard'
 
-export const ProductList = () => {
+export const DessertList = () => {
 	return (
-		<div className='mt-8 grid grid-cols-2 gap-6'>
+		<div className='mt-4 grid grid-cols-2 gap-6'>
 			<DessertCard></DessertCard>
 			<DessertCard></DessertCard>
 			<DessertCard></DessertCard>

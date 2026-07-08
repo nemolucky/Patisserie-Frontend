@@ -1,5 +1,5 @@
 import { CartSummary } from '../components/CartSummary/CartSummary'
-import { ProductList } from '../components/ProductList/ProductList'
+import { DessertList } from '../components/DessertList/DessertList'
 
 export const Cart = () => {
 	return (
@@ -12,7 +12,7 @@ export const Cart = () => {
 					>
 						Корзина
 					</h2>
-					<ProductList></ProductList>
+					<DessertList></DessertList>
 				</div>
 				<div className='flex-1'>
 					<CartSummary></CartSummary>

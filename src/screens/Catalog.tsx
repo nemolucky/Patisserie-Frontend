@@ -1,5 +1,5 @@
+import { DessertList } from '../components/DessertList/DessertList'
 import { Filters } from '../components/Filters/Filters'
-import { ProductList } from '../components/ProductList/ProductList'
 
 export const Catalog = () => {
 	return (
@@ -12,7 +12,7 @@ export const Catalog = () => {
 					>
 						Каталог
 					</h2>
-					<ProductList></ProductList>
+					<DessertList></DessertList>
 				</div>
 				<div className='flex-1'>
 					<Filters></Filters>

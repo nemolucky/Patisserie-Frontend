@@ -12,32 +12,20 @@ interface Props {
 export const NavButton = ({ icon: Icon, label, path }: Props) => {
 	const location = useLocation()
 
-	if (location.pathname === path) {
-		return (
-			<div
-				aria-label={`Current page: ${label}`}
-				className='bg-[#F6C9D0] text-white h-14 w-14 flex items-center justify-center rounded-full shadow-md'
-			>
-				<Icon size={24} />
-			</div>
-		)
-	}
-	if (location.pathname === '/dessert' && path === '/catalog') {
-		return (
-			<Link
-				to={path}
-				aria-label={`Current page: ${label}`}
-				className='bg-[#F6C9D0] text-white h-14 w-14 flex items-center justify-center rounded-full shadow-md'
-			>
-				<Icon size={24} />
-			</Link>
-		)
-	}
+	const isActive =
+		location.pathname === path ||
+		(location.pathname === '/dessert' && path === '/catalog')
+
 	return (
 		<Link
 			to={path}
-			aria-label={`Go to ${label}`}
-			className='bg-white text-[#4b3b36] hover:bg-[#4b3b361a] h-14 w-14 flex items-center justify-center rounded-full transition-colors duration-300'
+			aria-current={isActive ? 'page' : undefined}
+			aria-label={isActive ? `Current page: ${label}` : `Go to ${label}`}
+			className={`lg:h-14 h-12 lg:w-14 w-12 flex items-center justify-center rounded-full transition-all duration-300 ${
+				isActive
+					? 'bg-[#F6C9D0] text-white shadow-md'
+					: 'bg-white text-[#4b3b36] hover:bg-[#4b3b361a]'
+			}`}
 		>
 			<Icon size={24} />
 		</Link>
