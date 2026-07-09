@@ -12,7 +12,7 @@ export const About = () => {
 					>
 						Кондитерская, которая началась с одной домашней духовки
 					</h2>
-					<p className='text-md text-justify text-[#4b3b36bd] sm:text-lg lg:text-xl '>
+					<p className='text-md text-justify text-[#4b3b36bd] sm:text-lg lg:text-xl'>
 						Меня зовут Елена, и «Пудра» началась не с бизнес-плана, а с того,
 						что друзья постоянно просили испечь ещё один торт «на праздник».
 						Через полтора года домашняя кухня превратилась в маленькую

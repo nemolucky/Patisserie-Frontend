@@ -15,18 +15,18 @@ export const GuaranteeCard = ({ guarantee }: Props) => {
 
 	return (
 		<button
-			className={`flex flex-col items-start gap-4 px-12 pt-6 pb-3 w-full bg-white rounded-2xl shadow-md ${
-				isExpanded && 'pb-6'
+			className={`flex flex-col items-start gap-4 px-4 sm:px-6 md:px-8 xl:px-12 pt-3 sm:pt-4 xl:pt-5 xl:pb-2 w-full bg-white rounded-2xl shadow-md ${
+				isExpanded && 'pb-3 sm:pb-4 md:pb-6 xl:pb-6'
 			}`}
 			onClick={handleToggleExpanderClick}
 			aria-expanded={isExpanded}
 		>
 			<div className='w-full flex justify-between items-center'>
-				<div className='flex justify-between items-center gap-8'>
-					<span className='p-3 bg-[#C8E6CB] rounded-full'>
+				<div className='flex justify-start w-full items-center gap-4'>
+					<span className='p-2 md:p-3 bg-[#C8E6CB] rounded-full'>
 						<guarantee.icon />
 					</span>
-					<h3 className='text-xl'>{guarantee.label}</h3>
+					<h3 className='text-md md:text-lg'>{guarantee.label}</h3>
 				</div>
 				<ChevronDown
 					className={`transition-transform duration-300 ${
@@ -45,7 +45,10 @@ export const GuaranteeCard = ({ guarantee }: Props) => {
 				<div className='overflow-hidden flex flex-col gap-2'>
 					{guarantee.descriptions.map((description, index) => (
 						<div key={index} className='flex items-center gap-2'>
-							<Dot /> {description}
+							<Dot size={28} />
+							<span className='text-md md:text-lg text-left'>
+								{description}
+							</span>
 						</div>
 					))}
 				</div>

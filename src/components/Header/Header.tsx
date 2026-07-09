@@ -7,7 +7,7 @@ export const Header = () => {
 			>
 				Patisserie
 			</h1>
-			<p className='text-lg sm:text-xl 2xl:text-2xl text-[#4b3b36bd] text-center'>
+			<p className='text-md sm:text-lg 2xl:text-2xl text-[#4b3b36bd] text-center'>
 				домашние десерты <br /> ручной работы в Cамаре
 			</p>
 		</header>
