@@ -1,8 +1,21 @@
 import { Dot, ShoppingBasket } from 'lucide-react'
 import { useState } from 'react'
 import { NutritionFacts } from './NutritionFacts'
+import type { INutritionFacts } from '../../types/catalog'
 
-export const DessertDescription = () => {
+interface Props {
+	title: string
+	description: string
+	price: number
+	nutritionFacts: INutritionFacts
+}
+
+export const DessertDescription = ({
+	title,
+	description,
+	price,
+	nutritionFacts,
+}: Props) => {
 	const [quantity, setQuantity] = useState(1)
 
 	const handleAddToCart = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -30,19 +43,15 @@ export const DessertDescription = () => {
 	return (
 		<div className='flex flex-col gap-2'>
 			<h2 className='text-4xl' style={{ fontFamily: 'Fraunces' }}>
-				Ягодный бисквит
+				{title}
 			</h2>
 			{isActive}
-			<p className='text-md'>
-				Лёгкий бисквит на йогуртовой основе, прослойка из свежей малины и лесной
-				ежевики, воздушный крем на маскарпоне. Печём в день заказа, без
-				консервантов и стабилизаторов.
-			</p>
+			<p className='text-md'>{description}</p>
 			<p
 				className='mt-6 text-4xl font-semibold'
 				style={{ fontFamily: 'Fraunces' }}
 			>
-				2400 ₽
+				{price} ₽
 			</p>
 			<div className='mt-4 flex justify-start items-center gap-4'>
 				<div className='flex items-center border border-[#B98CAE] rounded-full'>
@@ -68,7 +77,7 @@ export const DessertDescription = () => {
 					<span>Добавить в корзину</span>
 				</button>
 			</div>
-			<NutritionFacts />
+			<NutritionFacts facts={nutritionFacts} />
 		</div>
 	)
 }

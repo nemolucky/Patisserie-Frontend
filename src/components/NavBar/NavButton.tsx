@@ -14,7 +14,7 @@ export const NavButton = ({ icon: Icon, label, path }: Props) => {
 
 	const isActive =
 		location.pathname === path ||
-		(location.pathname === '/dessert' && path === '/catalog')
+		(location.pathname.includes('/dessert') && path === '/catalog')
 
 	return (
 		<Link
