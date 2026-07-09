@@ -4,10 +4,10 @@ import { CertificateList } from '../components/CertificateList/CertificateList'
 export const About = () => {
 	return (
 		<div className='w-11/12 sm:w-9/12 md:w-10/12 mx-auto'>
-			<div className='mt-10 grid lg:grid-cols-3 gap-8 lg:gap-2 grid-cols-1'>
+			<div className='mt-10 lg:grid lg:grid-cols-3 gap-8 flex flex-col'>
 				<div className='order-2 lg:order-1 lg:col-span-2 flex flex-col gap-8'>
 					<h2
-						className='text-2xl text-[#4B3B36] sm:text-3xl xl:text-4xl'
+						className='text-2xl text-[#4B3B36] sm:text-3xl xl:text-4xl '
 						style={{ fontFamily: 'Fraunces' }}
 					>
 						Кондитерская, которая началась с одной домашней духовки
@@ -84,9 +84,9 @@ export const About = () => {
 					<CertificateList></CertificateList>
 				</div>
 				<img
-					src='../../person-cake.png'
+					src='src/assets/hero-2.jpg'
 					alt='Кондитер'
-					className='order-1 lg:order-2 w-full max-h-100 object-contain'
+					className='order-1 lg:order-2 w-min mx-auto max-h-100 lg:max-h-none lg:object-cover lg:w-full lg:aspect-2/3 object-contain shadow-md rounded-2xl shadow-[#4b3b3637]'
 				/>
 			</div>
 		</div>
