@@ -26,8 +26,8 @@ export const DessertDescription = ({
 
 	const isActive = true ? (
 		<div className='flex items-center justify-start gap-1'>
-			<Dot size={40} className='text-[#a8c3ab] m-0 p-0' />
-			<span className='mr-10 text-md font-semibold text-[#a8c3ab]'>
+			<Dot size={28} className='text-[#a8c3ab] m-0 p-0' />
+			<span className='mr-10 text-sm sm:text-md font-semibold text-[#a8c3ab]'>
 				Есть в наличии
 			</span>
 		</div>
@@ -42,13 +42,13 @@ export const DessertDescription = ({
 
 	return (
 		<div className='flex flex-col gap-2'>
-			<h2 className='text-4xl' style={{ fontFamily: 'Fraunces' }}>
+			<h2 className='text-2xl sm:text-3xl' style={{ fontFamily: 'Fraunces' }}>
 				{title}
 			</h2>
 			{isActive}
-			<p className='text-md'>{description}</p>
+			<p className='text-sm sm:text-md md:text-lg'>{description}</p>
 			<p
-				className='mt-6 text-4xl font-semibold'
+				className='mt-3 text-3xl font-semibold'
 				style={{ fontFamily: 'Fraunces' }}
 			>
 				{price} ₽
@@ -56,14 +56,14 @@ export const DessertDescription = ({
 			<div className='mt-4 flex justify-start items-center gap-4'>
 				<div className='flex items-center border border-[#B98CAE] rounded-full'>
 					<button
-						className=' px-4 py-2 text-[#B98CAE]'
+						className=' px-3 py-2 text-[#B98CAE]'
 						onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
 					>
 						-
 					</button>
-					<span className='px-4 py-2'>{quantity}</span>
+					<span className='px-3 py-2'>{quantity}</span>
 					<button
-						className='px-4 py-2 text-[#B98CAE]'
+						className='px-3 py-2 text-[#B98CAE]'
 						onClick={() => setQuantity(quantity + 1)}
 					>
 						+
@@ -74,7 +74,7 @@ export const DessertDescription = ({
 					onClick={handleAddToCart}
 				>
 					<ShoppingBasket size={26} />
-					<span>Добавить в корзину</span>
+					<span className='text-sm'>Добавить</span>
 				</button>
 			</div>
 			<NutritionFacts facts={nutritionFacts} />

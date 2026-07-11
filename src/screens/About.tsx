@@ -1,5 +1,6 @@
 import { Dot } from 'lucide-react'
 import { CertificateList } from '../components/CertificateList/CertificateList'
+import heroImg from '../assets/hero-2.jpg'
 
 export const About = () => {
 	return (
@@ -84,7 +85,7 @@ export const About = () => {
 					<CertificateList></CertificateList>
 				</div>
 				<img
-					src='src/assets/hero-2.jpg'
+					src={heroImg}
 					alt='Кондитер'
 					className='order-1 lg:order-2 w-min mx-auto max-h-100 lg:max-h-none lg:object-cover lg:w-full lg:aspect-2/3 object-contain shadow-md rounded-2xl shadow-[#4b3b3637]'
 				/>

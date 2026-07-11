@@ -23,7 +23,7 @@ export const NavigationButtonList: INavigationButton[] = [
 	{
 		icon: Dessert,
 		label: 'Каталог',
-		path: '/catalog',
+		path: '/',
 	},
 	// {
 	// 	icon: Heart,
